@@ -1,0 +1,15 @@
+defaults:
+  - data: cardiac_ukbb
+  - model: dl
+
+metric_groups: ["disp_metrics", "image_metrics", "seg_metrics"]
+inference: True
+analyse: True
+gpu: 0
+
+model_dir:
+test_dir: test
+
+hydra:
+  run:
+    dir: ${model_dir}/${test_dir}

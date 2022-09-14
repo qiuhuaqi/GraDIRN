@@ -1,0 +1,20 @@
+type: gradirn
+config:
+  ndim: ${data.ndim}
+  size: ${data.crop_size}
+  num_blocks: [1, 1, 1]
+  num_repeat: [3, 3, 3]
+  init_mode: 'identity'
+  scale_step_size: True
+
+  similarity: 'ssd'
+  tau_config:
+    init: 0.5
+    requires_grad: True
+    train_scale: 10.0
+
+  regulariser_config:
+    ndim: ${data.ndim}
+    num_layers: 5
+    num_channels: 32
+    input_images: 'explicit'

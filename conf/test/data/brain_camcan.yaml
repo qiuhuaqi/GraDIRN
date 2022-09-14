@@ -1,0 +1,11 @@
+type: 'brain_camcan'
+dataset:
+  data_dir:
+  modality: t1t1
+  crop_size: [176, 192, 176]
+  resample_size: [128, 128, 128]
+  evaluate: True
+
+dataloader:
+  batch_size: 1
+  num_workers: 8

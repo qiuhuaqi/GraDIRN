@@ -1,0 +1,12 @@
+type: 'cardiac_mm'
+vendor: 'all'
+dataset:
+  data_dir:
+  crop_size: [160, 160]
+  slicing:
+  original_spacing: [1.36719, 1.36719]
+  spacing: [2.0, 2.0]
+
+dataloader:
+  batch_size: 1
+  num_workers: 8

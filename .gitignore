@@ -1,0 +1,17 @@
+.idea
+# macOS
+.DS_Store
+._.DS_Store
+
+# IDEs
+~$*
+*.swp
+/.idea/
+/.vscode/*.log
+
+# compilation
+__pycache__/
+*.pyc
+*.pyd
+*.so
+*.dll__pycache__/

@@ -1,0 +1,14 @@
+name: brain_camcan
+ndim: 3
+
+batch_size: 4
+num_workers: 16
+shuffle: True
+
+train_limit_data: 1.0
+crop_size: [176, 192, 176]
+resample_size: [128, 128, 128]
+modality: t1t1
+
+train_path:
+val_path:

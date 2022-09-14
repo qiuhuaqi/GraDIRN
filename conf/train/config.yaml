@@ -1,0 +1,29 @@
+# @package _global_
+defaults:
+  - data: cardiac_ukbb
+  - network: gradirn
+  - loss: mse
+  - training: training
+
+metric_groups: ["disp_metrics", "seg_metrics", "image_metrics"]
+hparam_metrics: ["total_loss", "dice_avg", "asd_avg", "hd_avg", "negative_det_J", "rmse_image"]
+
+precision: 16
+gpu: 0
+
+experiment_root:
+run_dir:
+
+hydra:
+  run:
+    dir: ${experiment_root}/${run_dir}/${hydra.job.override_dirname}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ${experiment_root}/${run_dir}
+    subdir: ${hydra.job.override_dirname}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - run_dir
+          - gpu
+          - training.trainer.resume_from_checkpoint

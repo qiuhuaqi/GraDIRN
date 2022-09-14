@@ -1,0 +1,8 @@
+sim_loss:
+  type: mse
+  weight: 1.0
+  config:
+
+reg_loss:
+  type: diffusion
+  weight: 0.01

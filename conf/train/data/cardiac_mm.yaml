@@ -1,0 +1,19 @@
+name: cardiac_mm
+ndim: 2
+
+batch_size: 10
+num_workers: 8
+shuffle: True
+
+train_limit_data: 1.0
+crop_size: [160, 160]
+original_spacing: [1.36719, 1.36719]
+spacing: [2.0, 2.0]
+
+train_slicing: 'random'
+val_slicing:
+
+vendor: 'all'
+
+train_path:
+val_path:

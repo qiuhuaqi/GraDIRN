@@ -1,6 +1,30 @@
-# [DEPRECATED REPO] see: https://github.com/qiuhuaqi/GraDIRN
-# Multi-Resolution Gradient Descent Networks for Image Registration
-Code for MICCAI 2022 submission ID 420
+#  Embedding Gradient-based Optimization in Image Registration Networks
+
+## Welcome!
+
+This repository contains the code for training, testing and evaluating the method introduced in the paper:   
+"Embedding Gradient-based Optimization in Image Registration Networks" by Huaqi Qiu, Kerstin Hammernik, Chen Qin, Chen Chen, Daniel Rueckert
+ to be presented in [MICCAI 2022](https://conferences.miccai.org/2022/en/)
+
+The paper is available on ArXiv: https://arxiv.org/abs/2112.03915
+
+## Introduction
+In this paper, we introduce a new learning-based registration method by connecting the variational energy-based iterative optimization with learning-based iterative networks. Our proposed approach trains a DL network that embeds unrolled multiresolution gradient-based energy optimization in its forward pass, which explicitly enforces image dissimilarity minimization in its update steps.  
+
+![image](https://user-images.githubusercontent.com/17068099/190219234-a8349a8a-f406-4bfd-b257-500e501f6824.png)
+
+Extensive evaluations were performed on registration tasks using 2D cardiac MR and 3D brain MR images. We demonstrate that our approach achieved state-of-the-art registration performance while using fewer learned parameters, with good data efficiency and domain robustness.
+
+
+<p align="center">
+  <img alt="cardiac" src="https://user-images.githubusercontent.com/17068099/190221298-c00c8422-8ff9-47a6-ab73-c0ef16eb643d.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="brain" src="https://user-images.githubusercontent.com/17068099/190221270-0ac2caef-cf90-44db-933e-8c03df9ef09e.png" width="45%">
+</p>
+
+
+## Dependencies 
+
 
 Core dependencies:
 - Pytorch v1.8.1

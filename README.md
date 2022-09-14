@@ -17,9 +17,16 @@ In this paper, we introduce a new learning-based registration method by connecti
 Extensive evaluations were performed on registration tasks using 2D cardiac MR and 3D brain MR images. We demonstrate that our approach achieved state-of-the-art registration performance while using fewer learned parameters, with good data efficiency and domain robustness.
 
 <p align="center">
-  <img alt="cardiac" src="https://user-images.githubusercontent.com/17068099/190221298-c00c8422-8ff9-47a6-ab73-c0ef16eb643d.png" width="45%">
+  <img 
+       alt="cardiac" 
+       src="https://user-images.githubusercontent.com/17068099/190221298-c00c8422-8ff9-47a6-ab73-c0ef16eb643d.png" 
+       title="2D cardiac MRI intra-subject registration (UK biobank, end-diastolic vs. end-systolic)" 
+       width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="brain" src="https://user-images.githubusercontent.com/17068099/190221270-0ac2caef-cf90-44db-933e-8c03df9ef09e.png" width="45%">
+  <img alt="brain" 
+       src="https://user-images.githubusercontent.com/17068099/190221270-0ac2caef-cf90-44db-933e-8c03df9ef09e.png" 
+       width="45%"
+       title="3D brain MRI inter-subject registration (CamCAN, aging study)">
 </p>
 
 

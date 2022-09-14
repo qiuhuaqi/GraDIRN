@@ -46,9 +46,21 @@ To run training:
 2. Give the path of your train/val data directory in `conf/train/data/<your_data_config>.yaml` or via command line `data.train_path=<your_train_data_path> data.val_path=<your_val_data_path>`
 3. Run `python train.py run_dir=<your_run_dir> data=<your_data_config>` (by default this runs on GPU 0 of your machine with mixed precision.
 
+> More detailed instructions coming soon...
 
 ## Configurations
 We use [Hydra](https://hydra.cc/) for configuration parsing, which means all configuration options can be overwritten easily via command line.
 
 
-More instructions coming soon...
+
+## Data
+The cardiac MRI data from UK biobank and the CamCAN datasets are publicly available. However, we are not allowed to redistribute the original or the preprocessed data ourselves. The preprocessing process are described in the paper and the original data can be applied via the following links:
+- [CamCAN](https://camcan-archive.mrc-cbu.cam.ac.uk/dataaccess/)
+- [UK Biobank](https://www.ukbiobank.ac.uk/enable-your-research)
+
+The data used to evaluate domain shift robustness is freely available from the M&M2 challenge: https://www.ub.edu/mnms-2
+
+## Contact us
+Email: [Huaqi Qiu](mailto:hq615@ic.ac.uk)
+
+

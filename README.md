@@ -41,16 +41,18 @@ Core dependencies:
 
 
 ## Running the code
-To run training:
+### Training
 1. Download data and split the data into training and validation. Under train/val directory, organise data for each subject into one subject directory, with the name of the data files matching the suffix given in the dataloaders in `data/datasets.py`
 2. Give the path of your train/val data directory in `conf/train/data/<your_data_config>.yaml` or via command line `data.train_path=<your_train_data_path> data.val_path=<your_val_data_path>`
 3. Run `python train.py run_dir=<your_run_dir> data=<your_data_config>` (by default this runs on GPU 0 of your machine with mixed precision.
+> More detailed instructions coming soon...
 
+### Evaluation
 > More detailed instructions coming soon...
 
 ## Configurations
 We use [Hydra](https://hydra.cc/) for configuration parsing, which means all configuration options can be overwritten easily via command line.
-
+> More detailed instructions coming soon...
 
 
 ## Data

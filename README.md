@@ -42,16 +42,19 @@ Core dependencies:
 
 ## Running the code
 ### Training
-1. Download data and split the data into training and validation. Under train/val directory, organise data for each subject into one subject directory, with the name of the data files matching the suffix given in the dataloaders in `data/datasets.py`
-2. Give the path of your train/val data directory in `conf/train/data/<your_data_config>.yaml` or via command line `data.train_path=<your_train_data_path> data.val_path=<your_val_data_path>`
-3. Run `python train.py run_dir=<your_run_dir> data=<your_data_config>` (by default this runs on GPU 0 of your machine with mixed precision.
+1. Download and organise the data files of each subject into a directory, with the name of the data files matching the suffix given in the dataloaders in `data/datasets.py`
+3. Give the path of your train/val data directory in `conf/train/data/<your_data_config>.yaml` or via command line `data.train_path=<your_train_data_path> data.val_path=<your_val_data_path>`
+4. Run `python train.py experiment_root=<your_experiment_root_dir> run_dir=<your_run_dir_under_experiment_root>` 
+
+By default this runs on GPU 0 of your machine with mixed precision. Your model should be under `<your_experiment_root_dir>/<your_run_dir_under_experiment_root>`. These behaviours can be changed in `conf/train/conf.yaml`.
+
 > More detailed instructions coming soon...
 
 ### Evaluation
 > More detailed instructions coming soon...
 
 ## Configurations
-We use [Hydra](https://hydra.cc/) for configuration parsing, which means all configuration options can be overwritten easily via command line.
+We use [Hydra](https://hydra.cc/) for configuration parsing, which means all configurations defined in the YAML files can be overwritten easily via command line.
 > More detailed instructions coming soon...
 
 

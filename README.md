@@ -10,7 +10,7 @@ by Huaqi Qiu, Kerstin Hammernik, Chen Qin, Chen Chen, Daniel Rueckert
 The paper is available on ArXiv: https://arxiv.org/abs/2112.03915
 
 ## Paper TLDR
-> (skip via the Table of Content in the top-left corner of the README!) 
+> (If you have read the paer, you can skip this using the Table of Content in the top-left corner of the README!) 
 
 In this paper, we introduce a new learning-based registration method (clumsily named "GraDIRN" = "Gradient Descent Network for Image Registration")  by connecting the variational energy-based iterative optimization with learning-based iterative networks. Our proposed approach trains ("higher-levle optimization") a DL network that embeds unrolled multiresolution gradient-based energy optimization in its forward pass ("lower-level optimization"), which explicitly enforces image dissimilarity minimization in its update steps.  
 

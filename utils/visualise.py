@@ -10,8 +10,8 @@ def plot_warped_grid(ax, disp, bg_img=None, interval=3, title="$\mathcal{T}_\phi
     else:
         background = np.zeros(disp.shape[1:])  # black background
 
-    id_grid_H, id_grid_W = np.meshgrid(range(0, background.shape[0] - 1, interval),
-                                       range(0, background.shape[1] - 1, interval),
+    id_grid_H, id_grid_W = np.meshgrid(range(0, background.shape[0] - 1),
+                                       range(0, background.shape[1] - 1),
                                        indexing='ij')
 
     new_grid_H = id_grid_H + disp[0, id_grid_H, id_grid_W]
@@ -19,10 +19,14 @@ def plot_warped_grid(ax, disp, bg_img=None, interval=3, title="$\mathcal{T}_\phi
 
     kwargs = {"linewidth": 1.5, "color": color}
     # matplotlib.plot() uses x-y(-z) indexing
-    for i in range(new_grid_H.shape[0]):
-        ax.plot(new_grid_W[i, :], new_grid_H[i, :], **kwargs)  # each draws a horizontal line
-    for i in range(new_grid_H.shape[1]):
-        ax.plot(new_grid_W[:, i], new_grid_H[:, i], **kwargs)  # each draws a vertical line
+    for i in range(0, new_grid_H.shape[0], interval):
+        ax.plot(new_grid_W[i, : - (new_grid_H.shape[1] % interval) + 1], 
+                new_grid_H[i, : - (new_grid_H.shape[1] % interval) + 1], 
+                **kwargs)  # each draws a horizontal line
+    for i in range(0, new_grid_H.shape[1], interval):
+        ax.plot(new_grid_W[: - (new_grid_H.shape[0] % interval) + 1, i], 
+                new_grid_H[: - (new_grid_H.shape[0] % interval) + 1, i], 
+                **kwargs)  # each draws a vertical line
 
     ax.set_title(title, fontsize=title_font_size)
     ax.imshow(background, cmap='gray')
@@ -30,7 +34,6 @@ def plot_warped_grid(ax, disp, bg_img=None, interval=3, title="$\mathcal{T}_\phi
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_frame_on(False)
-
 
 def plot_result_fig(vis_data_dict, save_path=None, title_font_size=20, dpi=100, show=False, close=False):
     """Plot visual results in a single figure/subplots.
